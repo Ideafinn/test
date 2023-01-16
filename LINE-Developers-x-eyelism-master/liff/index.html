@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Appsheet Thai Dev.</title>
+  </head>
+  <body>
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <div class="alert alert-primary" role="alert">
+  <center>Loading...</center>
+</div>
+    
+    <script>
+  window.onload = function(e) {
+  liff.init({liffId:"1657307016-PM7XM49q"}, function() {
+    liff.ready.then(() => {
+     if (liff.isLoggedIn()) {
+       var link = getParameterByName("show");
+
+              
+       if(link == "appsheet"){
+         var A = getParameterByName("A"); // Customer       
+         var B = getParameterByName("B"); // Date 
+         var C = getParameterByName("C"); // Frame  
+         var D = getParameterByName("D"); // Lens
+         var E = getParameterByName("E"); // Prescription
+         var F = getParameterByName("F"); // Customer Code 
+         var Msg = [
+     
+          {
+  "type": "flex",
+  "altText": "this is a flex message",
+  "contents":
+    
+            //Start FLEX      
+          
+            {
+  "type": "bubble",
+  "header": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "image",
+        "url": "https://sv1.picz.in.th/images/2022/08/25/aNrEuq.jpg",
+        "size": "full",
+        "aspectMode": "cover",
+        "margin": "none",
+        "align": "center",
+        "backgroundColor": "#044383",
+        "offsetTop": "none",
+        "offsetBottom": "none",
+        "offsetStart": "none",
+        "aspectRatio": "31:15",
+        "position": "absolute",
+        "offsetEnd": "none",
+        "gravity": "center"
+      },
+      {
+        "type": "text",
+        "text": ""+F,
+        "size": "xs",
+        "color": "#ffffff",
+        "margin": "none",
+        "align": "end",
+        "weight": "regular",
+        "offsetTop": "lg",
+        "adjustMode": "shrink-to-fit"
+      }
+    ],
+    "spacing": "none",
+    "margin": "none",
+    "height": "100px",
+    "justifyContent": "flex-end"
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "md",
+    "contents": [
+      {
+        "type": "text",
+        "text": ""+A,
+        "wrap": true,
+        "weight": "bold",
+        "size": "lg",
+        "margin": "none"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "margin": "xs",
+        "spacing": "xs",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "baseline",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "text",
+                "text": "วันที่ :",
+                "size": "sm",
+                "flex": 2,
+                "margin": "none"
+              },
+              {
+                "type": "text",
+                "text": ""+B,
+                "wrap": true,
+                "size": "md",
+                "color": "#000000",
+                "flex": 8,
+                "weight": "regular",
+                "decoration": "none",
+                "align": "start"
+              }
+            ],
+            "margin": "none"
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "text",
+                "text": "กรอบ :",
+                "size": "sm",
+                "flex": 2,
+                "margin": "none"
+              },
+              {
+                "type": "text",
+                "text": ""+C,
+                "wrap": true,
+                "size": "md",
+                "color": "#044383",
+                "flex": 8,
+                "weight": "regular",
+                "decoration": "none"
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "text",
+                "text": "เลนส์ :",
+                "size": "sm",
+                "flex": 2,
+                "margin": "none"
+              },
+              {
+                "type": "text",
+                "text": ""+D,
+                "wrap": true,
+                "size": "md",
+                "color": "#044383",
+                "flex": 8,
+                "weight": "regular"
+              }
+            ]
+          },
+          {
+            "type": "separator",
+            "margin": "md"
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "text",
+                "text": ""+E,
+                "wrap": true,
+                "size": "sm",
+                "color": "#576975",
+                "flex": 6,
+                "weight": "regular",
+                "decoration": "none",
+                "margin": "xs"
+              }
+            ]
+          }
+        ],
+        "borderWidth": "none",
+        "borderColor": "#D5EAFF"
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "image",
+        "url": "https://sv1.picz.in.th/images/2022/08/25/aNrQVb.jpg",
+        "size": "full",
+        "aspectRatio": "18:4",
+        "aspectMode": "cover",
+        "margin": "none",
+        "offsetTop": "none",
+        "offsetBottom": "none",
+        "offsetStart": "none",
+        "position": "absolute",
+        "align": "center",
+        "gravity": "center",
+        "offsetEnd": "none"
+      }
+    ],
+    "spacing": "none",
+    "margin": "none",
+    "offsetEnd": "none",
+    "offsetBottom": "none",
+    "height": "65px",
+    "borderColor": "#576975"
+  },
+  "styles": {
+    "footer": {
+      "backgroundColor": "#576975",
+      "separator": true
+    }
+  }
+}
+            
+          }
+       
+        ]
+        
+        ShareTargetPicker(Msg)
+        }
+
+       
+
+       
+   } else {
+        liff.login();
+      }
+
+  
+    })
+  });
+    
+    
+      function ShareTargetPicker(flex){
+ 
+   liff.shareTargetPicker(flex).then(function () {
+            liff.closeWindow();
+        });
+   
+
+      }
+    
+    function sendflex(flex){
+        
+    liff.sendMessages(flex).then(function() {
+            liff.closeWindow();
+          
+        });
+        
+      }
+    
+    
+    
+      function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+  }
+  
+
+    </script>
+    
+  </body>
+</html>
+
+
+
